@@ -95,7 +95,7 @@ async function checkSpotify() {
  **/
 songEmitter.on('newSong', song => {
   rpc.setActivity({
-    type: "LISTENING",
+    type: 'LISTENING',
     details: `${song.name}`,
     state: `${song.artist}`,
     startTimestamp: song.start,
@@ -119,6 +119,7 @@ songEmitter.on('songUpdate', song => {
     undefined;
 
   rpc.setActivity({
+    type: 'LISTENING',
     details: `${song.name}`,
     state: `${song.artist}`,
     startTimestamp,
